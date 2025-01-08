@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./career_expert_system/ "
+    ]
+}

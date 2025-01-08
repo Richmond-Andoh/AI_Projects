@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Recommendation</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Path Recommendation System</h1>
+        <form method="POST">
+            <label for="interest">Interest:</label>
+            <input type="text" id="interest" name="interest" placeholder="e.g., technology, art" required><br>
+            
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" name="skills" placeholder="e.g., programming, design" required><br>
+            
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="any">Any</option>
+                <option value="associate">Associate</option>
+                <option value="bachelor">Bachelor</option>
+                <option value="master">Master</option>
+            </select><br>
+            
+            <button type="submit">Get Recommendations</button>
+        </form>
+        {% if recommendations %}
+            <div class="results">
+                <h2>Recommended Careers:</h2>
+                <ul>
+                    {% for career in recommendations %}
+                        <li>{{ career }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
