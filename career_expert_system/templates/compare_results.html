@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Comparison: {{ career1 }} vs. {{ career2 }}</h1>
+    <div class="comparison">
+        <div class="column">
+            <h2>{{ career1 }}</h2>
+            <p><strong>Overview:</strong> {{ details1.overview }}</p>
+            <p><strong>Salary:</strong> {{ details1.wages }}</p>
+            <p><strong>Job Outlook:</strong> {{ details1.employment_outlook }}</p>
+        </div>
+
+        <div class="column">
+            <h2>{{ career2 }}</h2>
+            <p><strong>Overview:</strong> {{ details2.overview }}</p>
+            <p><strong>Salary:</strong> {{ details2.wages }}</p>
+            <p><strong>Job Outlook:</strong> {{ details2.employment_outlook }}</p>
+        </div>
+    </div>
+    <a href="{{ url_for('compare') }}" class="back-button">🔙 Compare Again</a>
+</div>

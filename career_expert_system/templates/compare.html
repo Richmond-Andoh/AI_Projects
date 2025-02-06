@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Careers</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Compare Careers</h1>
+        <form method="POST">
+            <label>Select First Career:</label>
+            <select name="career1">
+                {% for career in careers %}
+                    <option value="{{ career }}">{{ career }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Select Second Career:</label>
+            <select name="career2">
+                {% for career in careers %}
+                    <option value="{{ career }}">{{ career }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Compare</button>
+        </form>
+    </div>
+</body>
+</html>
